@@ -9575,7 +9575,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -19294,6 +19293,22 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-kalama",
+    owner: "samsung",
+    src: "proprietary/vendor/bin/init.kernel.post_boot-kalama.sh",
+    filename: "init.kernel.post_boot-kalama.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot",
+    owner: "samsung",
+    src: "proprietary/vendor/bin/init.kernel.post_boot.sh",
+    filename: "init.kernel.post_boot.sh",
     soc_specific: true,
 }
 
